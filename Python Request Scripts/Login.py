@@ -8,10 +8,9 @@ username = ("admin","admin1","admin11")
 password = ("password","Pass","test")
 
 for i in username:
-    print (i)
     for j in password:
-       credentials= {'Contact':i,'Pass':j}
-       print ("username: " + i + "\n Passowrd:" + j)
+       credentials= {'username':i,'password':j}
+       print ("Username: " + i + "\n Passowrd:" + j)
        #passing data using request post
        r = requests.post(url, data=credentials)
        #using request text to get responce text and searching for success keyword in responce body
